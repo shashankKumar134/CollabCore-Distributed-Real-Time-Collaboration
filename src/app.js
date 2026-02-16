@@ -17,6 +17,7 @@ class App {
   routes() {
     // this.app.use('/api/documents', documentRoutes);
   }
+  
 }
 
 export default new App().app;

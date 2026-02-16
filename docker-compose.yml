@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
 
   db:
@@ -10,7 +8,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: collabdb
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -25,7 +23,7 @@ services:
       - "4000:4000"
     volumes:
       - .:/app
-    command: ["node", "src/server.js"]
+    command: ["node", "src/server.js"] 
 
 volumes:
   postgres_data:
